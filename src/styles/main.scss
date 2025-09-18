@@ -1,4 +1,14 @@
 @charset "utf-8";
 
-@import "../../node_modules/tailwindcss";
+@import "tailwindcss";
+
+.landing-page-text {
+  background: gray;
+}
+
+.landing-page-background-image {
+  background-image: url("../../public/landing_page_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 

@@ -1,11 +1,13 @@
-import { Movie } from "@/src/types/movie";
+"use client"
+
+import { Movie } from "../types/movie";
 import Link from "next/link";
 
 interface Props {
     movie: Movie;
 }
 
-export default function MovieCard({ movie }: { movie: Movie }) {
+const MovieCard = ({ movie }: { movie: Movie }) => {
     return (
         <div className="bg-white shadow rounded-lg overflow-hidden flex flex-col">
             <Link href={`/movies/${movie.id}`}>
@@ -33,10 +35,11 @@ export default function MovieCard({ movie }: { movie: Movie }) {
                         View Details →
                     </Link>
 
-                    {/* Client-side favorites toggle */}
                     {/*<FavoriteButton movieId={movie.id} initialFavorite={movie.favorite} />*/}
                 </div>
             </div>
         </div>
     );
 }
+
+export default MovieCard;

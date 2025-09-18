@@ -1,6 +1,6 @@
 "use client";
 
-import { store } from "@/src/shared/lib/store";
+import { store } from "../shared/lib/store";
 import { Provider } from "react-redux";
 
 export default function ReduxProviderWrapper({ children }: { children: React.ReactNode }) {

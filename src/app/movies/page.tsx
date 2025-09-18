@@ -1,12 +1,11 @@
 import Link from "next/link";
-import MovieCard from "../components/MovieCard";
-import Pagination from "../components/Pagination";
-import { MoviesResponse } from "@/src/types/movie";
+import { MoviesResponse } from "../../types/movie";
+import Pagination from "@/src/components/Pagination";
+import MovieCard from "@/src/components/MovieCard";
 
 async function getMovies(page: number): Promise<MoviesResponse> {
     const res = await fetch(
-        `${process.env.API_URL || "https://movie-api-decs.onrender.com/api"}/movies?page=${page}&limit=8`,
-        { cache: "no-store" }
+        `${process.env.API_URL || "https://movie-api-decs.onrender.com/api"}/movies?page=${page}`
     );
 
     if (!res.ok) {
